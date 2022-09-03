@@ -23,3 +23,9 @@ async def list_stalk():
     for l in lel:
         l.append(lel["_"])
     return l
+
+async def stalking(_: int):
+    stalking = stalkdb.find_one({"_": _})
+    if stalking:
+        return True
+    return False
