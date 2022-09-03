@@ -19,4 +19,7 @@ async def list_stalk():
     if not get:
         return []
     lel = await get.to_list(length=10000000000)
-    return lel
+    l = []
+    for l in lel:
+        l.append(lel["_"])
+    return l
