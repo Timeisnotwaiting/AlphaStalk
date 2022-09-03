@@ -30,7 +30,7 @@ async def stalking(_: int):
         return True
     return False
 
-stalkdb = db.stalk
+stalksudo = db.stalksudo
 
 async def add_sudo(_: int):
     stalking = stalksudo.find_one({"_": _})
