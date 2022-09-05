@@ -2,6 +2,7 @@ from pyrogram import Client, filters, idle
 from pyrogram.types import Message
 from os import getenv
 from database import *
+from log import Log
 
 API_ID = getenv("API_ID")
 API_HASH = getenv("API_HASH")
@@ -17,4 +18,4 @@ app = (":Yashvi:", API_ID, API_HASH, BOT_TOKEN)
     if m.text.split()[0][1].lower() == "u":
         stalking = await stalking(m.from_user.id)
         if not stalking:
-            return await 
+            return await Log(
